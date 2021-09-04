@@ -1,0 +1,41 @@
+---
+title: "An Overview of 'Practices of Coherence in Massive Twitch Chat'"
+author: "Aspen Russell, Breanna E. Green"
+date: "9/2/2021"
+output: word_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Background
+
+
+# Hypotheses
+  1. Massive chat messages are shorter
+  2. Massive chat messages contain less original content
+  3. Massive chats contain fewer unique words
+
+# Methods
+ * Between April and August 2016 -- observed and recorded small & massive chats
+ * Analyzed 50-message message segments -- 5 Smaller Chats vs 5 Massive Chats
+ * Measured:
+    + Scroll Rate
+    + Message length
+    + Amount fo original content -- as defined by John Sinclair's Theory of lexical Items
+    + '# of unique voices in each segment
+
+# Findings
+  * H1: SUPPORTED
+    + Shorthanding -- Massive chats contained fewer lexical items: Avg. 3 LIs per message vs 5.5 LIs in smaller chats
+  * H2: SUPPORTED
+    + Bricolage -- Massive chats included less unique content per 50-message segment: Avg. 85 unique LIs per segment vs 169 LIs in smaller chat
+  * H3: UNSUPPORTED
+    + Voice -- Total voice counts were comparable across
+
+```{r installs, include=FALSE}
+#install.packages("trackdown")
+library(trackdown)
+
+```
