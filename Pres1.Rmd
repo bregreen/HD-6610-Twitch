@@ -55,6 +55,51 @@ usethis::edit_r_environ()
 ```{r TwitchScarpe}
 # Setup authentication
 twitch_auth()
+#print(twitch_auth()) would show you this info! Bearer is included
+
+# An example request to the streams endpoint
+streams_live <- get_streams(first = 15, language = "en")
+streams_live$data
+
+#https://api.twitch.tv/v5/videos/<video_id>comments?content_offset_seconds=1000
+```
+
+
+
+
+
+```{r}
+get_streams <- function(first=20,
+                        after=NULL,
+                        before=NULL,
+                        community_id=NULL,
+                        game_id=NULL,
+                        language=NULL,
+                        type=NULL,
+                        user_id=NULL,
+                        user_login=NULL){
+  
+  if(!provided_client_id()){}
+  
+  url <- 'https://api.twitch.tv/helix/streams'
+  
+  o <- GET(url,
+           query = query_list(
+             first=first,)) %>% content()
+  
+  if(!is.null(o$error) && o$error=="Unauthorized") stop(o$message)
+  if(length(o$data)<1) stop("No results for this query parameters.")
+  
+  o$data <- o$data %>% transpose() %>% simplify_all() %>% dplyr::as_tibble()
+  
+  return(o)
+}
+
+```
+
+```{r k}
+#sock <- socketConnection(host = 'irc.chat.twitch.tv', port = 6667)
+sock
 
 ```
 
