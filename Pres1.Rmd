@@ -36,6 +36,25 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```{r installs, include=FALSE}
 #install.packages("trackdown")
-library(trackdown)
+#library(trackdown)
+
+#install.packages("devtools")
+#devtools::install_github("Freguglia/rTwitchAPI")
+
+library(rTwitchAPI)
 
 ```
+
+
+
+
+```{r edit_env}
+usethis::edit_r_environ()
+```
+
+```{r TwitchScarpe}
+# Setup authentication
+twitch_auth()
+
+```
+
