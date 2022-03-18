@@ -6,6 +6,8 @@ __pycache__/
 [Cc]opy[\d$].py
 *key.py
 
+.DS_Store
+
 # Jupyter Notebook
 .ipynb_checkpoints
 
