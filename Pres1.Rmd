@@ -52,7 +52,7 @@ library(rTwitchAPI)
 usethis::edit_r_environ()
 ```
 
-```{r TwitchScarpe}
+```{r TwitchScrape}
 # Setup authentication
 twitch_auth()
 #print(twitch_auth()) would show you this info! Bearer is included
