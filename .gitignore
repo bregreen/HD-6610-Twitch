@@ -1,10 +1,8 @@
 ### Python ###
 # Byte-compiled / optimized / DLL files
 __pycache__/
-*.py[cod]
-*$py.class
 [Cc]opy[\d$].py
-*key.py
+
 
 .DS_Store
 
